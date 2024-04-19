@@ -1,16 +1,132 @@
-### Hi there 👋
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>登陆界面</title>
+    <style>
+        html {
+            background-color: #B5DEF2;
+        }
 
-<!--
-**wanghuijie11/wanghuijie11** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+        .wrapper {
+            margin: 140px 0 140px auto;
+            width: 884px;
+        }
 
-Here are some ideas to get you started:
+        .loginBox {
+            background-color: #F0F4F6;
+            /*上divcolor*/
+            border: 1px solid #BfD6E1;
+            border-radius: 5px;
+            color: #444;
+            font: 14px 'Microsoft YaHei', '微软雅黑';
+            margin: 0 auto;
+            width: 388px
+        }
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+        .loginBox .loginBoxCenter {
+            border-bottom: 1px solid #DDE0E8;
+            padding: 24px;
+        }
+
+        .loginBox .loginBoxCenter p {
+            margin-bottom: 10px
+        }
+
+        .loginBox .loginBoxButtons {
+            /*background-color: #F0F4F6;*/
+            /*下divcolor*/
+            border-top: 0px solid #FFF;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            line-height: 28px;
+            overflow: hidden;
+            padding: 20px 24px;
+            vertical-align: center;
+            filter: alpha(Opacity=80);
+            -moz-opacity: 0.5;
+            opacity: 0.5;
+        }
+
+        .loginBox .loginInput {
+            border: 1px solid #D2D9dC;
+            border-radius: 2px;
+            color: #444;
+            font: 12px 'Microsoft YaHei', '微软雅黑';
+            padding: 8px 14px;
+            margin-bottom: 8px;
+            width: 310px;
+        }
+
+        .loginBox .loginInput:FOCUS {
+            border: 1px solid #B7D4EA;
+            box-shadow: 0 0 8px #B7D4EA;
+        }
+
+        .loginBox .loginBtn {
+            background-image: -moz-linear-gradient(to bottom, blue, #85CFEE);
+            border: 1px solid #98CCE7;
+            border-radius: 20px;
+            box-shadow: inset rgba(255, 255, 255, 0.6) 0 1px 1px, rgba(0, 0, 0, 0.1) 0 1px 1px;
+            color: #444;
+            /*登录*/
+            cursor: pointer;
+            float: right;
+            font: bold 13px Arial;
+            padding: 10px 50px;
+        }
+
+        .loginBox .loginBtn:HOVER {
+            background-image: -moz-linear-gradient(to top, blue, #85CFEE);
+        }
+
+        .loginBox a.forgetLink {
+            color: #ABABAB;
+            cursor: pointer;
+            float: right;
+            font: 11px/20px Arial;
+            text-decoration: none;
+            vertical-align: middle;
+            /*忘记密码*/
+        }
+
+        .loginBox a.forgetLink:HOVER {
+            color: #000000;
+            text-decoration: none;
+            /*忘记密码*/
+        }
+
+        .loginBox input#remember {
+            vertical-align: middle;
+        }
+
+        .loginBox label[for="remember"] {
+            font: 11px Arial;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <form action="/chaos/EvilEmail.html" method="post">
+        <div class="loginBox">
+            <div class="loginBoxCenter">
+                <p><label for="username">用户名：</label></p>
+                <!--autofocus 规定当页面加载时按钮应当自动地获得焦点。 -->
+                <!-- placeholder提供可描述输入字段预期值的提示信息-->
+                <p><input type="text" id="text" name="text" class="loginInput" autofocus="autofocus" required="required" autocomplete="off" placeholder="请输入邮箱/手机号" value="" /></p>
+                <!-- required 规定必需在提交之前填写输入字段-->
+                <p><label for="password">密码：</label></p>
+                <p><input type="password" id="password" name="password" class="loginInput" required="required" placeholder="请输入密码" value="" /></p>
+                <input id="remember" type="checkbox" name="remember" />
+                <label for="remember">记住登录状态</label>
+            </div>
+            <div class="loginBoxButtons">
+                <a href="ppp.html">登录</a>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+
+
+</html>
